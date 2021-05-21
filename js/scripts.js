@@ -1,4 +1,5 @@
 function callback () {
+    
 
 }
 
@@ -9,5 +10,5 @@ function events (obj,typ,opts) {
 }
 
 window.onload = function () {
-events(document.getElementById,"click",callback,null);
+events(document.getElementById('tmp'),"click",callback,null);
 }
