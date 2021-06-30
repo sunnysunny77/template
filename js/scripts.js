@@ -3,7 +3,7 @@ function callback () {
 
 }
 
-function events (obj,typ,opts) {
+function events (obj,typ,callback,opts) {
     if (obj) {
         obj.addEventListener(typ,callback,opts);
     }
