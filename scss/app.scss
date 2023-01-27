@@ -1,8 +1,11 @@
-@charset "utf-8";
+@import "variables";
+
 /* css */  
 
+body {
+    margin: 0;
+}
 
-/* Breaks */  
 @media only Screen and (max-width: 992px) {
    
 }
