@@ -10,5 +10,5 @@ function events (obj,typ,callback,opts) {
 }
 
 window.onload = function () {
-events(document.getElementById('tmp'),"click",callback,null);
+//events(document.getElementById('tmp'),"click",callback,null);
 }
