@@ -1,6 +1,12 @@
+@font-face {
+  font-family: Poppins;
+  src: url(./Poppins-Regular.ttf);
+  font-display: swap;
+}
 /* css */
 body {
   margin: 0;
+  font-family: Poppins;
 }
 
 /*# sourceMappingURL=app.css.map */
