@@ -1,12 +1,4 @@
 @import "variables";
-
-/* css */  
-
-body {
-    margin: 0;
-    font-family: Poppins;
-}
-
-@media only Screen and (min-width: 992px) {
-   
-}
+@import "font";
+@import "breakpoints";
+@import "global";
