@@ -1,13 +1,5 @@
-const events = (obj,typ,callback,opts) => {
-  if (obj) {
-    obj.addEventListener(typ,callback,opts);
-  }
-};
+import { events } from "./utillites.js";
 
-const callback = () => {
-};
+events(window, "load", () => {
 
-
-events(window, "load",  () => {
-  callback();
 });

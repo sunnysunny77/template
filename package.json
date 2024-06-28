@@ -1,11 +1,16 @@
 {
   "name": "template",
+  "type": "module",
   "version": "1.0.0",
   "description": "template",
   "main": "./js/app.js",
   "scripts": {
-    "build": "node ./node_modules/sass/sass.js ./scss:./css",
-    "watch": "node ./node_modules/sass/sass.js ./scss:./css -w"
+    "watch-css": "node ./node_modules/sass/sass.js ./scss/app.scss:./css/app.min.css --style compressed -w",
+    "build-css": "node ./node_modules/sass/sass.js ./scss/app.scss:./css/app.min.css --style compressed",
+    "watch-js": "node ./node_modules/watchify/bin/cmd.js --debug ./js/app.js -o ./js/app.min.js -v",
+    "build-js": "node ./node_modules/uglify-js/bin/uglifyjs ./js/app.js -o ./js/app.min.js --source-map",
+    "dev": "concurrently \"npm run watch-css\" \"npm run watch-js\"",
+    "build": "concurrently \"npm run build-css\" \"npm run build-js\""
   },
   "repository": {
     "type": "git",
@@ -18,6 +23,26 @@
   },
   "homepage": "https://github.com/sunnysunny77/template#readme",
   "dependencies": {
-    "sass": "latest"
+    "@babel/preset-env": "latest",
+    "babelify": "latest",
+    "browserify": "latest",
+    "concurrently": "latest",
+    "eslint": "latest",
+    "globals": "latest",
+    "sass": "latest",
+    "uglify-js": "latest",
+    "watchify": "latest"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "@babel/preset-env"
+          ]
+        }
+      ]
+    ]
   }
 }
