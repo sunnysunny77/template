@@ -1,4 +1,14 @@
+@import "boostrap-settings";
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/transitions";
+@import "../node_modules/bootstrap/scss/bootstrap-grid";
+@import "../node_modules/bootstrap/scss/navbar";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+
 @import "variables";
 @import "font";
 @import "breakpoints";
+
 @import "global";

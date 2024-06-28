@@ -24,7 +24,9 @@
   "homepage": "https://github.com/sunnysunny77/template#readme",
   "dependencies": {
     "@babel/preset-env": "latest",
+    "@fortawesome/fontawesome-free": "latest",
     "babelify": "latest",
+    "bootstrap": "latest",
     "browserify": "latest",
     "concurrently": "latest",
     "eslint": "latest",
