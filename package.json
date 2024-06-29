@@ -6,11 +6,13 @@
   "main": "./js/app.js",
   "scripts": {
     "watch-css": "node ./node_modules/sass/sass.js ./scss/app.scss:./css/app.min.css --style compressed -w",
-    "build-css": "node ./node_modules/sass/sass.js ./scss/app.scss:./css/app.min.css --style compressed",
+    "static-css": "node ./node_modules/sass/sass.js ./scss/app.scss:./css/app.min.css --style compressed",
     "watch-js": "node ./node_modules/watchify/bin/cmd.js --debug ./js/app.js -o ./js/app.min.js -v",
-    "build-js": "node ./node_modules/uglify-js/bin/uglifyjs ./js/app.js -o ./js/app.min.js --source-map",
-    "dev": "concurrently \"npm run watch-css\" \"npm run watch-js\"",
-    "build": "concurrently \"npm run build-css\" \"npm run build-js\""
+    "build-js": "node ./node_modules/browserify/bin/cmd.js ./js/app.js --debug | node ./node_modules/uglify-js/bin/uglifyjs -cm -o ./js/app.min.js --source-map 'content=inline,filename='app.min.js',url=app.js.map'",
+    "production-js": "node ./node_modules/browserify/bin/cmd.js ./js/app.js | node ./node_modules/uglify-js/bin/uglifyjs -cm > ./js/app.min.js",
+    "watch": "concurrently \"npm run watch-css\" \"npm run watch-js\"",
+    "build": "concurrently \"npm run static-css\" \"npm run build-js\"",
+    "production": "concurrently \"npm run static-css\" \"npm run production-js\""
   },
   "repository": {
     "type": "git",
