@@ -13,7 +13,8 @@ import '../node_modules/bootstrap/js/dist/collapse';
 // import '../node_modules/bootstrap/js/dist/tooltip';
 import "../node_modules/@fortawesome/fontawesome-free/js/all.min.js";
 import { events } from "./utillites.js";
+import { service_worker } from "./service_worker.js";
 
 events(window, "load", () => {
-
+    service_worker();
 });
