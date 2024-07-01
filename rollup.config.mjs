@@ -7,7 +7,7 @@ export default {
   output: [
     {
       file: "./site/js/app.min.js",
-      format:  'iife',
+      format:  "iife",
       plugins: [terser()]
     }
   ],
