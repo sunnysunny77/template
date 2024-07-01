@@ -6,7 +6,7 @@ self.addEventListener("install", (event) => {
         cache.addAll([
           "/",
           "/css/app.min.css",
-          "/js/app.js"
+          "/js/app.min.js"
         ])
       )
   );

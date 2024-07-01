@@ -9,7 +9,7 @@ export const resources = () => {
 export const service_worker = () => {
 
    //list all sources used: can comment out 
-   resources(); 
+   //resources(); 
 
   if ("serviceWorker" in navigator) {
     // Register a service worker hosted at the root of the

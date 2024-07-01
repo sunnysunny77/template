@@ -10,7 +10,9 @@
     "watch-js": "rollup -c ./rollup.config-watch.js -w",
     "build-js": "rollup -c ./rollup.config-build.js",
     "production-js": "rollup -c ./rollup.config-production.js",
-    "watch": "concurrently \"npm run watch-css\" \"npm run watch-js\"",
+    "serve": "serve -l 3000",
+    "open": "open http:localhost:3000",
+    "watch": "concurrently \"npm run watch-css\" \"npm run watch-js\" \"npm run serve\" \"npm run open\"",
     "build": "concurrently \"npm run static-css\" \"npm run build-js\"",
     "production": "concurrently \"npm run static-css\" \"npm run production-js\""
   },
@@ -25,18 +27,19 @@
   },
   "homepage": "https://github.com/sunnysunny77/template#readme",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.5.2",
-    "@rollup/plugin-babel": "^6.0.4",
-    "@rollup/plugin-commonjs": "^26.0.1",
-    "@rollup/plugin-terser": "^0.4.4",
+    "@fortawesome/fontawesome-free": "latest",
+    "@rollup/plugin-babel": "latest",
+    "@rollup/plugin-commonjs": "latest",
+    "@rollup/plugin-terser": "latest",
     "bootstrap": "^5.3.3",
-    "concurrently": "^8.2.2",
-    "eslint": "^9.6.0",
-    "globals": "^15.7.0",
-    "rollup": "^4.18.0",
-    "rollup-plugin-livereload": "^2.0.5",
-    "rollup-plugin-serve": "^1.1.1",
-    "rollup-plugin-sourcemaps": "^0.6.3",
-    "sass": "^1.77.6"
+    "concurrently": "latest",
+    "eslint": "latest",
+    "globals": "latest",
+    "open": "latest",
+    "rollup": "latest",
+    "rollup-plugin-livereload": "latest",
+    "rollup-plugin-sourcemaps": "latest",
+    "sass": "latest",
+    "serve": "latest"
   }
 }
