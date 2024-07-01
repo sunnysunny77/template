@@ -16,5 +16,6 @@ import { service_worker } from "./service_worker.js";
 import { events } from "./utillites.js";
 
 events(window, "load", () => {
-   service_worker();
+
+  service_worker();
 });

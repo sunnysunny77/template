@@ -2,13 +2,13 @@ import { babel } from "@rollup/plugin-babel";
 import commonjs from "@rollup/plugin-commonjs";
 import terser from "@rollup/plugin-terser";
 import livereload from 'rollup-plugin-livereload';
+import fs from 'fs';
 
 export default {
-  input: "js/index.js",
+  input: "./js/index.js",
   output: [
     {
-      sourcemap: true,
-      file: "./js/app.min.js",
+      file: "./site/js/app.min.js",
       format:  'iife',
       plugins: [terser()]
     }
@@ -16,6 +16,15 @@ export default {
   plugins: [
     commonjs(),
     babel({ babelHelpers: "bundled" }),
-    livereload("./")
+    livereload({
+      watch: './site',
+      verbose: false,
+      port: 3001,
+      delay: 300,
+      https: {
+        key: fs.readFileSync('./keys/selfsigned.key'),
+        cert: fs.readFileSync('./keys/selfsigned.crt')
+    }
+    })
   ]
 };

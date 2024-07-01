@@ -6,8 +6,7 @@ export default {
   input: "./js/index.js",
   output: [
     {
-      sourcemap: false,
-      file: "./js/app.min.js",
+      file: "./site/js/app.min.js",
       format:  'iife',
       plugins: [terser()]
     }
