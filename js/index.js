@@ -12,9 +12,9 @@
 // import '../node_modules/bootstrap/js/dist/toast';
 // import '../node_modules/bootstrap/js/dist/tooltip';
 // import "../node_modules/@fortawesome/fontawesome-free/js/all.js";
-// import { service_worker } from "./service_worker.js";
+import { service_worker } from "./service_worker.js";
 import { events } from "./utillites.js";
 
 events(window, "load", () => {
-   //service_worker();
+   service_worker();
 });

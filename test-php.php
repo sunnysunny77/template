@@ -17,7 +17,10 @@
     <header> </header>
 
     <main>
-  
+        <?php echo "Echo: test-php"; ?>
+        <a href="./">Index</a>
+        <a href="./test.html">Test</a>
+        <a href="./test-php.php">Test</a>
     </main>
 
     <footer> </footer>

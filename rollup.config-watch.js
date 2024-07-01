@@ -16,6 +16,6 @@ export default {
   plugins: [
     commonjs(),
     babel({ babelHelpers: "bundled" }),
-    livereload('./')
-  ],
+    livereload("./")
+  ]
 };
