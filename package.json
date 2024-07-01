@@ -10,7 +10,7 @@
     "watch-js": "rollup -c ./rollup.config-watch.js -w",
     "build-js": "rollup -c ./rollup.config-build.js",
     "production-js": "rollup -c ./rollup.config-production.js",
-    "serve": "serve -l 3000",
+    "serve": "php -S 127.0.0.1:3000",
     "open": "open http:localhost:3000",
     "watch": "concurrently \"npm run watch-css\" \"npm run watch-js\" \"npm run serve\" \"npm run open\"",
     "build": "concurrently \"npm run static-css\" \"npm run build-js\"",
@@ -39,7 +39,6 @@
     "rollup": "latest",
     "rollup-plugin-livereload": "latest",
     "rollup-plugin-sourcemaps": "latest",
-    "sass": "latest",
-    "serve": "latest"
+    "sass": "latest"
   }
 }
