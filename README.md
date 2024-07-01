@@ -19,6 +19,9 @@
     <br>
     <br>
     <br>
+    npm run mkcert "make certificates",
+    <br>
+    <br>
     npm run serve "start localhost server",
     <br>
     <br>

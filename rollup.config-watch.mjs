@@ -22,8 +22,8 @@ export default {
       port: 3001,
       delay: 300,
       https: {
-        key: fs.readFileSync("./keys/selfsigned.key"),
-        cert: fs.readFileSync("./keys/selfsigned.crt")
+        key: fs.readFileSync("./certs/key.pem"),
+        cert: fs.readFileSync("./certs/cert.pem")
     }
     })
   ]
