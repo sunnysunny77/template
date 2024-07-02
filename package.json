@@ -37,7 +37,6 @@
     "concurrently": "latest",
     "curl": "latest",
     "eslint": "latest",
-    "git": "latest",
     "globals": "latest",
     "open": "latest",
     "rollup": "latest",
