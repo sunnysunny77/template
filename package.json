@@ -14,7 +14,6 @@
     "production-js": "rollup -c ./rollup.config.mjs",
     "serve": "cd ./site && ../caddy/cmd/caddy/caddy run",
     "open": "open https://localhost:3000",
-    "mkcert": "node mkcert.js",
     "watch": "concurrently \"npm run watch-css\" \"npm run watch-js\" \"npm run serve\" \"npm run open\"",
     "build": "concurrently \"npm run build-css\" \"npm run build-js\"",
     "production": "concurrently \"npm run production-css\" \"npm run production-js\""
@@ -40,7 +39,6 @@
     "eslint": "latest",
     "git": "latest",
     "globals": "latest",
-    "mkcert": "latest",
     "open": "latest",
     "rollup": "latest",
     "rollup-plugin-sourcemaps": "latest",

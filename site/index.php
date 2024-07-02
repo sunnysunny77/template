@@ -32,7 +32,6 @@
 
     </main>
 
-    <script src="http://localhost:35729/livereload.js"></script>
     <script src="./js/app.min.js" defer></script>
 
 </body>
