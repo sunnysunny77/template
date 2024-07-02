@@ -17,17 +17,13 @@
     npm run production-js "build-js -no-source-map",
     <br>
     <br>
-    <br>
-    <br>
-    npm run mkcert "make certificates",
-    <br>
-    <br>
     npm run serve "start localhost server",
     <br>
     <br>
+    npm run open "open localhost server",
     <br>
     <br>
-    npm run watch: "live reloading localhost server watching all",
+    npm run watch: "open localhost server watching all",
     <br>
     <br>
     npm run build  "build-css build-js",

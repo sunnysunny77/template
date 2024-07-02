@@ -13,6 +13,6 @@ export default {
   ],
   plugins: [
     commonjs(),
-    babel({ babelHelpers: "bundled" }),
+    babel({ babelHelpers: "bundled" })
   ]
 };

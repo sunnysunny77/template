@@ -1,3 +1,4 @@
+
 {
   "name": "template",
   "type": "module",
@@ -5,15 +6,17 @@
   "description": "template",
   "main": "./js/app.js",
   "scripts": {
+    "install": "node mkcert.js && curl -sS https://webi.sh/golang | sh ||  curl.exe https://webi.sh/golang | powershell && cd ./caddy && git pull 'https://github.com/caddyserver/caddy.git' || ( git clone 'https://github.com/caddyserver/caddy.git' && cd ./caddy/cmd/caddy/ && go build && cd ../../../site  && ../caddy/cmd/caddy/caddy adapt)",
     "watch-css": "sass ./scss/app.scss:./site/css/app.min.css --style compressed -w",
     "build-css": "sass ./scss/app.scss:./site/css/app.min.css --style compressed",
     "production-css": "sass ./scss/app.scss:./site/css/app.min.css --style compressed --no-source-map",
-    "watch-js": "rollup -c ./rollup.config-watch.mjs -w --sourcemap",
+    "watch-js": "rollup -c ./rollup.config.mjs -w --sourcemap",
     "build-js": "rollup -c ./rollup.config.mjs --sourcemap",
     "production-js": "rollup -c ./rollup.config.mjs",
+    "serve": "cd ./site && ../caddy/cmd/caddy/caddy run",
+    "open": "open https://localhost:3000",
     "mkcert": "node mkcert.js",
-    "serve": "node ./php-server.js",
-    "watch": "concurrently \"npm run watch-css\" \"npm run watch-js\" \"npm run serve\"",
+    "watch": "concurrently \"npm run watch-css\" \"npm run watch-js\" \"npm run serve\" \"npm run open\"",
     "build": "concurrently \"npm run build-css\" \"npm run build-js\"",
     "production": "concurrently \"npm run production-css\" \"npm run production-js\""
   },
@@ -34,13 +37,13 @@
     "@rollup/plugin-terser": "latest",
     "bootstrap": "^5.3.3",
     "concurrently": "latest",
+    "curl": "latest",
     "eslint": "latest",
-    "fs": "latest",
+    "git": "latest",
     "globals": "latest",
     "mkcert": "latest",
-    "php-server": "latest",
+    "open": "latest",
     "rollup": "latest",
-    "rollup-plugin-livereload": "latest",
     "rollup-plugin-sourcemaps": "latest",
     "sass": "latest"
   }
