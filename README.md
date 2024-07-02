@@ -9,13 +9,13 @@
     npm i "install app"
     <br>
     <br>
-    npm run i-server  "insall https server",
+    npm run i-server  "install https server",
     <br>
     <br>
     npm run i-config "load server config",
     <br>
     <br>
-    npm run mkcert  "create CA CERT KEY for live reloading, dont forget to trust the ca in teh system key chain",
+    npm run mkcert  "create CA CERT KEY for live reloading, dont forget to trust the ca in the system key chain",
     <br>
     <br>
     <h1>
