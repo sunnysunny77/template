@@ -9,6 +9,9 @@
     npm i "install app"
     <br>
     <br>
+    npm run i-server  "install https server",
+    <br>
+    <br>
     npm run i-config "load server config",
     <br>
     <br>

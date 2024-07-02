@@ -5,6 +5,7 @@
   "description": "template",
   "main": "./js/app.js",
   "scripts": {
+    "i-server": "curl -sS https://webi.sh/caddy | sh || curl.exe https://webi.ms/caddy | powershell",
     "i-config": "caddy adapt --config ./site/Caddyfile",
     "mkcert": "node mkcert.js",
     "serve": "cd ./site && caddy run",
