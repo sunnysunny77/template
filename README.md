@@ -1,6 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <body>
+    <h1>
+        install
+    </h1>
+    <br>
+    <br>
+    npm i "install app"
+    <br>
+    <br>
+    npm run i-server  "insall https server",
+    <br>
+    <br>
+    npm run i-config "load server config",
+    <br>
+    <br>
+    npm run mkcert  "create CA CERT KEY for live reloading, dont forget to trust the ca in teh system key chain",
+    <br>
+    <br>
+    <h1>
+        Individual commands
+    </h1>
+    <br>
+    <br>
+    npm run serve "start https server",
+    <br>
+    <br>
+    npm run open "open localhost server",
     <br>
     <br>
     npm run watch-css "watch-css" 
@@ -17,15 +43,9 @@
     npm run production-js "build-js -no-source-map",
     <br>
     <br>
-    npm run serve "start localhost server",
-    <br>
-    <br>
-    npm run open "open localhost server",
-    <br>
-    <br>
-    npm run mkcert "to make a cert for the live loading over HTTPS, dont forget to trust the ca file on youre system",
-    <br>
-    <br>
+    <h1>
+        Real commands
+    </h1>
     npm run watch: "live open localhost server watching all",
     <br>
     <br>
