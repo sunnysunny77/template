@@ -23,7 +23,10 @@
     npm run open "open localhost server",
     <br>
     <br>
-    npm run watch: "open localhost server watching all",
+    npm run mkcert "to make a cert for the live loading over HTTPS, dont forget to trust the ca file on youre system",
+    <br>
+    <br>
+    npm run watch: "live open localhost server watching all",
     <br>
     <br>
     npm run build  "build-css build-js",
