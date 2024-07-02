@@ -5,9 +5,9 @@
   "description": "template",
   "main": "./js/app.js",
   "scripts": {
-    "i-config": "./caddy adapt --config ./site/Caddyfile",
+    "i-config": "caddy adapt --config ./site/Caddyfile",
     "mkcert": "node mkcert.js",
-    "serve": "cd ./site && ../caddy run",
+    "serve": "cd ./site && caddy run",
     "open": "open https://localhost:3000",
     "watch-css": "sass ./scss/app.scss:./site/css/app.min.css --style compressed -w",
     "build-css": "sass ./scss/app.scss:./site/css/app.min.css --style compressed",
