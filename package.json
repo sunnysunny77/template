@@ -13,7 +13,7 @@
     "i-config:win32": "%INIT_CWD%/win32/caddy adapt",
     "i-config:default": "$INIT_CWD/default/caddy adapt",
     "i-format": "run-script-os",
-    "i-format:win32": "$INIT_CWD/win32/caddy fmt --overwrite",
+    "i-format:win32": "%INIT_CWD%/win32/caddy fmt --overwrite",
     "i-format:default": "$INIT_CWD/default/caddy fmt --overwrite",
     "mkcert": "node mkcert.js",
     "echo": "node echo.js",
