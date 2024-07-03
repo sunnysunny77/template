@@ -5,7 +5,9 @@ localhost:3000 {
 	header Cache-Control "no-cache"
 }
 
-localhost:3001 {
-	root site
-	reverse_proxy :3000
+https://localhost:3002 {
+	tls {
+		on_demand
+	}
+	reverse_proxy :3001
 }

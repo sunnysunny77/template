@@ -2,7 +2,7 @@ import { createCA, createCert } from "mkcert";
 import fs from "fs";
 
 const ca = await createCA({
-  organization: "livereload",
+  organization: "invalid-ca",
   countryCode: "AU",
   state: "WA",
   locality: "Perth",
