@@ -7,10 +7,10 @@
   "scripts": {
     "install": "npm run i-config",
     "serve": "run-script-os",
-    "serve:win32": "$INIT_CWD/win32/caddy run",
+    "serve:win32": "%INIT_CWD%/win32/caddy run",
     "serve:default": "$INIT_CWD/default/caddy run",
     "i-config": "run-script-os",
-    "i-config:win32": "$INIT_CWD/win32/caddy adapt",
+    "i-config:win32": "%INIT_CWD%/win32/caddy adapt",
     "i-config:default": "$INIT_CWD/default/caddy adapt",
     "i-format": "run-script-os",
     "i-format:win32": "$INIT_CWD/win32/caddy fmt --overwrite",
