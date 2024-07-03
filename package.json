@@ -6,10 +6,10 @@
   "main": "./js/app.js",
   "scripts": {
     "serve": "run-script-os",
-    "serve:win32": "cd ./site; ../win/caddy run",
-    "serve:default": "cd ./site && ../default/caddy run",
+    "serve:win32": "cd ./win; ./caddy run --config ../site/Caddyfile",
+    "serve:default": "cd ./default && ./caddy run --config ../site/Caddyfile",
     "i-config": "run-script-os",
-    "i-config:win32": "cd ./win/; ./caddy adapt --config ../site/Caddyfile",
+    "i-config:win32": "cd ./win; ./caddy adapt --config ../site/Caddyfile",
     "i-config:default": "cd ./default && ./caddy adapt --config ../site/Caddyfile",
     "mkcert": "node mkcert.js",
     "echo": "node echo.js",
