@@ -5,20 +5,23 @@
   "description": "template",
   "main": "./js/app.js",
   "scripts": {
-    "i-server": "curl -sS https://webi.sh/caddy | sh || curl.exe https://webi.ms/caddy | powershell",
-    "i-config": "caddy adapt --config ./site/Caddyfile",
+    "serve": "run-script-os",
+    "serve:win32": "cd ./site & ./win/caddy run && fg",
+    "serve:default": "cd ./site & ./default/caddy run && fg",
+    "i-config": "run-script-os",
+    "i-config:win32": "./win/caddy adapt --config ./site/Caddyfile",
+    "i-config:default": "./default/caddy adapt --config ./site/Caddyfile",
     "mkcert": "node mkcert.js",
-    "serve": "cd ./site && caddy run",
-    "open": "open https://localhost:3000",
+    "echo": "node echo.js",
     "watch-css": "sass ./scss/app.scss:./site/css/app.min.css --style compressed -w",
     "build-css": "sass ./scss/app.scss:./site/css/app.min.css --style compressed",
     "production-css": "sass ./scss/app.scss:./site/css/app.min.css --style compressed --no-source-map",
     "watch-js": "rollup -c ./rollup.config-watch.mjs -w --sourcemap",
     "build-js": "rollup -c ./rollup.config.mjs --sourcemap",
     "production-js": "rollup -c ./rollup.config.mjs",
-    "watch": "concurrently \"npm run watch-css\" \"npm run watch-js\" \"npm run serve\" \"npm run open\"",
-    "build": "concurrently \"npm run build-css\" \"npm run build-js\"",
-    "production": "concurrently \"npm run production-css\" \"npm run production-js\""
+    "watch": "concurrently --hide \"serve\" \"npm:echo\" \"npm:serve\" \"npm:watch-css\" \"npm:watch-js\"",
+    "build": "concurrently \"npm:build-css\" \"npm:build-js\"",
+    "production": "concurrently \"npm:production-css\" \"npm:production-js\""
   },
   "repository": {
     "type": "git",
@@ -30,7 +33,7 @@
     "url": "https://github.com/sunnysunny77/template/issues"
   },
   "homepage": "https://github.com/sunnysunny77/template#readme",
-  "dependencies": {
+  "devDependencies": {
     "@fortawesome/fontawesome-free": "latest",
     "@rollup/plugin-babel": "latest",
     "@rollup/plugin-commonjs": "latest",
@@ -42,10 +45,11 @@
     "fs": "latest",
     "globals": "latest",
     "mkcert": "latest",
-    "open": "latest",
     "rollup": "latest",
     "rollup-plugin-livereload": "^2.0.5",
     "rollup-plugin-sourcemaps": "latest",
-    "sass": "latest"
+    "run-script-os": "latest",
+    "sass": "latest",
+    "terminal-link": "latest"
   }
 }

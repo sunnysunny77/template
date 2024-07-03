@@ -9,9 +9,6 @@
     npm i "install app"
     <br>
     <br>
-    npm run i-server  "install https server",
-    <br>
-    <br>
     npm run i-config "load server config",
     <br>
     <br>
@@ -24,9 +21,6 @@
     <br>
     <br>
     npm run serve "start https server",
-    <br>
-    <br>
-    npm run open "open localhost server",
     <br>
     <br>
     npm run watch-css "watch-css" 
@@ -46,7 +40,7 @@
     <h1>
         Real commands
     </h1>
-    npm run watch: "live open localhost server watching all",
+    npm run watch: "live localhost server watching all",
     <br>
     <br>
     npm run build  "build-css build-js",
