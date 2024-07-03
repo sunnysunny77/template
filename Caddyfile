@@ -6,5 +6,6 @@ localhost:3000 {
 }
 
 https://localhost:3002 {
+	root site
 	reverse_proxy :3001
 }
