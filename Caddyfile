@@ -1,13 +1,11 @@
 localhost:3000 {
-
-root site
-php_fastcgi 127.0.0.1:9000
-file_server
-header Cache-Control "no-cache"
+	root site
+	php_fastcgi 127.0.0.1:9000
+	file_server
+	header Cache-Control "no-cache"
 }
 
 localhost:3001 {
-
-root site
-reverse_proxy :3000
+	root site
+	reverse_proxy :3000
 }
