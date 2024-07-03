@@ -40,7 +40,7 @@
     <h1>
         Real commands
     </h1>
-    npm run watch: "live localhost server watching all",
+    npm run watch "live localhost server watching all",
     <br>
     <br>
     npm run build  "build-css build-js",
