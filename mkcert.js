@@ -2,7 +2,7 @@ import { createCA, createCert } from "mkcert";
 import fs from "fs";
 
 const ca = await createCA({
-  organization: "invalid-ca-v1",
+  organization: "invalid-ca",
   countryCode: "AU",
   state: "WA",
   locality: "Perth",
@@ -11,7 +11,7 @@ const ca = await createCA({
 
 const cert = await createCert({
   ca: { key: ca.key, cert: ca.cert },
-  domains: ["127.0.0.1", "localhost"],
+  domains: ["127.0.0.1", "dev.localhost"],
   validity: 365
 });
 
