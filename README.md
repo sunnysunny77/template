@@ -9,21 +9,12 @@
     npm i "install app"
     <br>
     <br>
-    npm run mkcert  "create CA CERT KEY for live reloading, dont forget to trust the ca in the system key chain",
-    <br>
-    <br>
     <h1>
         Individual commands
     </h1>
     <br>
     <br>
-    npm run i-config "load server config",
-    <br>
-    <br>
-    npm run i-format "format config",
-    <br>
-    <br>
-    npm run serve "start https server",
+    npm run sphp-server "start http server",
     <br>
     <br>
     npm run watch-css "watch-css" 
