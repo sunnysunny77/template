@@ -1,6 +1,6 @@
 dev.localhost {
 	root site
-	php_fastcgi ../static-php-cli/buildroot/bin/php-fpm/www.sock
+	php_fastcgi 127.0.0.1:9000
 	file_server
 	header Cache-Control "no-cache"
 }
