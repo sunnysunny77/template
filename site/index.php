@@ -22,7 +22,7 @@
 
           <div class="col-11 col-sm-24 text-center mt-11">
 
-            HELLO WORLDa
+            HELLO WORLD
             
           <div>
 
