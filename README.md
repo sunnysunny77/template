@@ -17,10 +17,10 @@
     npm i "install app"
     <br>
     <br>
-        "mkcert": "make certifactes",
+        npm run mkcert "make certifactes",
     <br>
     <br>
-        Mac: double click on the cert.pem and draging it into the system key chain, you all aldo need to change the certifiacte to allways trust, right click on the localhost certifacte and press get info, change to allways trust and exit the key chain
+        Mac: double click on the cert.pem and drag it into the system key chain, you will need to change the certifiacte to allways trust, right click on the localhost certifacte and press get info, change to allways trust and exit the key chain
     <br>
     <br>
     <h1>
