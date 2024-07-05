@@ -40,6 +40,9 @@
     npm run caddy-format "format config",
     <br>
     <br>
+    npm run php-server "start php server",
+    <br>
+    <br>
     npm run watch-css "watch-css" 
     <br>
     npm run build-css "build-css"
