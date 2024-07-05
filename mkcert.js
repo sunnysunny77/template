@@ -11,7 +11,7 @@ const ca = await createCA({
 
 const cert = await createCert({
   ca: { key: ca.key, cert: ca.cert },
-  domains: ["localhost", "127.0.0.1"],
+  domains: ["dev.localhost", "127.0.0.1"],
   validity: 365
 });
 
