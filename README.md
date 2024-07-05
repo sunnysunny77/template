@@ -23,6 +23,9 @@
         Mac: double click on the cert.pem and drag it into the system key chain, you will need to change the certifiacte to allways trust, right click on the localhost certifacte and press get info, change to allways trust and exit the key chain
     <br>
     <br>
+        Windows: search for manage user certificates, right click trusted root certification authorites, select all tasks and import the the certificate
+    <br>
+    <br>
     <h1>
         Individual commands
     </h1>
