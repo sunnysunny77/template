@@ -1,12 +1,8 @@
-template.localhost {
+localhost {
 	root ./site/
 	encode zstd gzip
 	templates
 	file_server browse
-	tls ./ssl.crt ./ssl.key
 	reverse_proxy :3002
-}
-
-:3001 {
-	reverse_proxy :3000
+	reverse_proxy localhost:35729
 }

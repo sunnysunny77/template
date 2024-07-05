@@ -5,7 +5,7 @@
   "description": "template",
   "main": "./js/app.js",
   "scripts": {
-    "install": "openssl req -x509 -newkey rsa:4096 -keyout ssl.key -out ssl.crt -sha256 -days 3650 -nodes -subj '/C=XX/ST=WA/L=Perth/O=Template/OU=Web/CN=template.loclalhost'",
+    "install": "openssl req -x509 -sha256 -nodes -newkey rsa:2048 -days 365 -keyout server.key -out server.crt",
     "caddy-server": "run-script-os",
     "caddy-config": "run-script-os",
     "caddy-format": "run-script-os",
@@ -47,8 +47,6 @@
     "eslint": "latest",
     "fs": "latest",
     "globals": "latest",
-    "local-ssl-proxy":  "latest",
-    "openssl-self-signed-certificate": "latest",
     "php-server": "latest",
     "rollup": "latest",
     "rollup-plugin-livereload": "latest",
