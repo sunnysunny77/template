@@ -1,10 +1,10 @@
-localhost {
+dev.localhost {
 	root ./site/
 	encode zstd gzip
 	templates
 	file_server browse
-	php_fastcgi 127.0.0.1:9000
 	tls ./certs/crt.crt ./certs/key.key
+	reverse_proxy :3002
 }
 
 :3001 {
