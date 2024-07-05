@@ -16,7 +16,7 @@ const cert = await createCert({
 });
 
 
-fs.writeFile("./certs/key.pem", cert.key, (err) => {
+fs.writeFile("./certs/key.key", cert.key, (err) => {
     if (err)
         console.log(err);
     else {
@@ -24,7 +24,7 @@ fs.writeFile("./certs/key.pem", cert.key, (err) => {
     }
 });
 
-fs.writeFile("./certs/cert.pem", cert.cert, (err) => {
+fs.writeFile("./certs/crt.crt", cert.cert, (err) => {
     if (err)
         console.log(err);
     else {
@@ -32,7 +32,7 @@ fs.writeFile("./certs/cert.pem", cert.cert, (err) => {
     }
 });
 
-fs.writeFile("./certs/ca.cert", `${cert.cert}${ca.cert}`, (err) => {
+fs.writeFile("./certs/ca.crt", `${cert.cert}${ca.cert}`, (err) => {
     if (err)
         console.log(err);
     else {
