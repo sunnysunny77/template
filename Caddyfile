@@ -1,9 +1,9 @@
-dev.localhost {
+template.localhost {
 	root ./site/
 	encode zstd gzip
 	templates
 	file_server browse
-	tls ./certs/crt.crt ./certs/key.key
+	tls ./ssl.crt ./ssl.key
 	reverse_proxy :3002
 }
 
