@@ -5,8 +5,9 @@
   "description": "template",
   "main": "./js/app.js",
   "scripts": {
-    "install": "npm run install-caddy",
-    "install-caddy": "cross-env-shell git clone \"https://github.com/caddyserver/caddy.git\" || cd $INIT_CWD/caddy; git clone \"https://github.com/caddyserver/caddy.git\"; cd $INIT_CWD/caddy/cmd/caddy; go build; npm run mkcert",
+    "install": "npm run install-caddy; npm run build-caddy; npm run mkcert; npm run install-cert",
+    "install-caddy": "cross-env-shell git clone \"https://github.com/caddyserver/caddy.git\"; || cd $INIT_CWD/caddy; git clone \"https://github.com/caddyserver/caddy.git\"",
+    "build-caddy": "cross-env-shell cd $INIT_CWD/caddy/cmd/caddy; go build" ,
     "mkcert": "run-script-os",
     "mkcert:default": "sh mkcert.sh",
     "mkcert:win32": "bash mkcert.sh",
