@@ -1,7 +1,7 @@
 {
   "name": "template",
   "type": "module",
-  "version": "3.0.0",
+  "version": "3.3.3",
   "description": "template",
   "main": "./js/app.js",
   "scripts": {
@@ -25,13 +25,14 @@
     "caddy-config:win32": "cross-env-shell $INIT_CWD/win32/caddy/cmd/caddy/caddy run --config $INIT_CWD/Caddyfile",
     "caddy-format:win32": "cross-env-shell $INIT_CWD/win32/caddy/cmd/caddy/caddy fmt $INIT_CWD/Caddyfile --overwrite",
     "php-server": "node php-server.js",
+    "open-server": "node open.js",
     "watch-css": "sass ./scss/app.scss:./site/css/app.min.css --style compressed -w",
     "build-css": "sass ./scss/app.scss:./site/css/app.min.css --style compressed",
     "production-css": "sass ./scss/app.scss:./site/css/app.min.css --style compressed --no-source-map",
     "watch-js": "rollup -c ./rollup.config-watch.mjs -w --sourcemap",
     "build-js": "rollup -c ./rollup.config.mjs --sourcemap",
     "production-js": "rollup -c ./rollup.config.mjs",
-    "watch": "concurrently \"npm:caddy-server\" \"npm:php-server\" \"npm:watch-css\" \"npm:watch-js\"",
+    "watch": "concurrently --hide 'caddy-server' \"npm:caddy-server\" \"npm:php-server\" \"npm:watch-css\" \"npm:watch-js\" \"npm:open-server\"",
     "build": "concurrently \"npm:build-css\" \"npm:build-js\"",
     "production": "concurrently \"npm:production-css\" \"npm:production-js\""
   },

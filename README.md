@@ -5,13 +5,13 @@
         install
     </h1>
     <br>
-    https://go.dev/doc/install
+    https://git-scm.com/downloads 
     <br>
     https://www.php.net/downloads.php
     <br>
     https://nodejs.org/en/download/package-manager
     <br>
-    https://git-scm.com/downloads
+    https://go.dev/doc/install
     <br>
     <br>
     npm i "install app"
@@ -32,6 +32,9 @@
     <br>
     <br>
     npm run php-server "start php server",
+    <br>
+    <br>
+    npm run open-server "open browser",
     <br>
     <br>
     npm run watch-css "watch-css" 
