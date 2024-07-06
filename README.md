@@ -16,16 +16,6 @@
     <br>
     npm i "install app"
     <br>
-    npm run clone-caddy "clone caddy"
-    <br>
-    cd caddy/cmd/caddy/
-    <br>
-    go build
-    <br>
-    npm run mkcert "make certificate"
-    <br>
-    npm run install-cert "install certificate"
-    <br>
     <br>
     <h1>
         Individual commands
