@@ -1,8 +1,9 @@
-localhost {
+*.localhost {
 	root ./site/
+	tls ./server.crt ./server.key
 	encode zstd gzip
 	templates
 	file_server browse
-	reverse_proxy :3002
-	reverse_proxy localhost:35729
+	reverse_proxy :3001
+	reverse_proxy :3000
 }
