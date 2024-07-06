@@ -1,7 +1,7 @@
 node_modules
 package-lock.json
 server.key
-server.cert
+server.crt
 site/css/app.min.css
 site/css/app.min.css.map
 site/js/app.min.js
