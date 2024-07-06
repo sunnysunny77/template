@@ -3,13 +3,9 @@
   "type": "module",
   "version": "3.3.3",
   "description": "template",
-
-
-
   "main": "./js/app.js",
   "scripts": {
-    "install": "npm run build-caddy && npm run mkcert && npm run install-cert", 
-    "build-caddy": "cross-env-shell cd $INIT_CWD/caddy/cmd/caddy && go build",
+    "clone-caddy": "git clone \"https://github.com/caddyserver/caddy.git\"",
     "mkcert": "run-script-os",
     "mkcert:default": "sh mkcert.sh",
     "mkcert:win32": "bash mkcert.sh",
