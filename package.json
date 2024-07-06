@@ -6,7 +6,7 @@
   "main": "./js/app.js",
   "scripts": {
     "install": "concurrently \"npm:mkcert\" \"npm:install-caddy\"",
-    "install-caddy": "git clone 'https://github.com/caddyserver/caddy.git' || cd $INIT_CWD/caddy; git clone 'https://github.com/caddyserver/caddy.git'; cd $INIT_CWD/caddy/caddy/cmd/caddy; go build",
+    "install-caddy": "git clone 'https://github.com/caddyserver/caddy.git' || cd $INIT_CWD/caddy; git clone 'https://github.com/caddyserver/caddy.git'; cd $INIT_CWD/caddy/cmd/caddy; go build",
     "mkcert": "run-script-os",
     "mkcert:default": "sh mkcert.sh",
     "mkcert:win32": "bash mkcert.sh",
