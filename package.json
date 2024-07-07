@@ -26,7 +26,7 @@
     "watch-js": "rollup -c ./rollup.config-watch.mjs -w --sourcemap",
     "build-js": "rollup -c ./rollup.config.mjs --sourcemap",
     "production-js": "rollup -c ./rollup.config.mjs",
-    "watch": "concurrently --hide 'caddy-server' \"npm:caddy-server\" \"npm:php-server\" \"npm:watch-css\" \"npm:watch-js\" \"npm:open-server\"",
+    "watch": "concurrently --hide \"caddy-server\" \"npm:php-server\" \"npm:watch-css\" \"npm:watch-js\" \"npm:open-server\"",
     "build": "concurrently \"npm:build-css\" \"npm:build-js\"",
     "production": "concurrently \"npm:production-css\" \"npm:production-js\""
   },
