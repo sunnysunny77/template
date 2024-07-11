@@ -22,7 +22,7 @@
     "caddy-format:default": "cross-env-shell bash source-env.sh && $INIT_CWD/caddy fmt $INIT_CWD/Caddyfile --overwrite",
     "php-server": "node php-server.js",
     "open-server": "node open.js",
-    "open-server-443": "node --env-file=.env open-443.js",
+    "open-server-443": "cross-env-shell node --env-file=$INIT_CWD/.env open-443.js",
     "watch-css": "sass ./scss/app.scss:./site/css/app.min.css --style compressed -w",
     "build-css": "sass ./scss/app.scss:./site/css/app.min.css --style compressed",
     "production-css": "sass ./scss/app.scss:./site/css/app.min.css --style compressed --no-source-map",

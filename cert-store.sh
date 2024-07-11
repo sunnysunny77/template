@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source .env
+source $INIT_CWD/.env
 
 ### Script installs root.cert.pem to certificate trust store of applications using NSS
 ### (e.g. Firefox, Thunderbird, Chromium)

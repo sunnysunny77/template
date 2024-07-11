@@ -1,3 +1,3 @@
 #!/bin/bash
 
-source .env
+source $INIT_CWD/.env

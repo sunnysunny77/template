@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source .env
+source $INIT_CWD/.env
 
 openssl genrsa -des3 -passout pass:developemnt -out ca.key 2048 &&
 
