@@ -2,9 +2,39 @@
 
 source $INIT_CWD/.env
 
-openssl genrsa -des3 -passout pass:developemnt -out ca.key 2048 &&
+echo -e "[ req ]\n\
+default_bits = 2048\n\
+prompt = no\n\
+default_md = sha256\n\
+req_extensions = req_ext\n\
+distinguished_name = dn\n\
+[ dn ]\n\
+C = AU\n\
+ST = Perth\n\
+L = Western Australia\n\
+O = Web Developers\n\
+OU = Dev\n\
+CN = $FQDN\n\
+[ req_ext ]\n\
+subjectAltName = @alt_names\n\
+[ alt_names ]\n\
+DNS.1 = $FQDN\n\
+DNS.2 = $FQDN:3002" > csr.conf
 
-openssl req \
+echo -e "authorityKeyIdentifier=keyid,issuer\n\
+basicConstraints=CA:FALSE\n\
+keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment\n\
+subjectAltName = @alt_names\n\
+[alt_names]\n\
+DNS.1 = $FQDN \n\
+DNS.2 = $FQDN:3002" > cert.conf
+
+openssl genrsa \
+-des3 \
+-passout pass:developemnt \
+-out ca.key 2048 &&
+
+echo | openssl req \
 -x509 \
 -new \
 -sha256 \
@@ -13,7 +43,7 @@ openssl req \
 -nodes \
 -key ca.key \
 -passin pass:developemnt \
--subj "/CN=$FQDN Root CA/C=AU/ST=Western Australia/L=Perth/O=Web Developers/OU=Dev" && 
+-subj "/CN=$FQDN Root CA/C=AU/ST=Western Australia/L=Perth/O=Web Developers/OU=Dev"
 
 openssl req \
 -new \
@@ -22,30 +52,7 @@ openssl req \
 -out server.csr \
 -newkey rsa:2048 \
 -keyout server.key \
--config <(cat << EOF
-[ req ]
-default_bits = 2048
-prompt = no
-default_md = sha256
-req_extensions = req_ext
-distinguished_name = dn
-
-[ dn ]
-C = AU
-ST = Perth
-L = Western Australia
-O = Web Developers
-OU = Dev
-CN = $FQDN
-
-[ req_ext ]
-subjectAltName = @alt_names
-
-[ alt_names ]
-DNS.1 = $FQDN
-DNS.2 = $FQDN:3002
-EOF
-) &&
+-config csr.conf
 
 openssl x509 \
 -req \
@@ -57,16 +64,6 @@ openssl x509 \
 -out server.crt \
 -days 500 \
 -sha256 \
--extfile <(cat << EOF
-authorityKeyIdentifier=keyid,issuer
-basicConstraints=CA:FALSE
-keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment
-subjectAltName = @alt_names
-
-[alt_names]
-DNS.1 = $FQDN
-DNS.2 = $FQDN:3002
-EOF
-); 
+-extfile cert.conf; 
 
 npm run install-cert
