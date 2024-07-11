@@ -1,3 +1,3 @@
 import open from "open";
-await open("https://dev.localhost:3002");
-console.log("running on https://dev.localhost:3002");
+await open(`https://${process.env.FQDN}:3002`);
+console.log(`running on https://${process.env.FQDN}:3002`);
