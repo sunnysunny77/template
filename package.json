@@ -58,6 +58,7 @@
     "concurrently": "latest",
     "cross-env": "latest",
     "dotenv": "latest",
+    "eslint-config-standard": "latest",
     "eslint": "latest",
     "fs": "latest",
     "globals": "latest",
