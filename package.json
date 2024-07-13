@@ -51,7 +51,6 @@
     "fs": "latest",
     "globals": "latest",
     "http": "latest",
-    "http-proxy": "latest",
     "https": "latest",
     "open": "latest",
     "php-server": "latest",
