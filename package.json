@@ -1,8 +1,8 @@
 {
-  "name": "slider",
+  "name": "template",
   "type": "module",
   "version": "5.5.5",
-  "description": "slider",
+  "description": "template",
   "main": "./js/app.js",
   "scripts": {
     "install": "cross-env-shell bash install.sh",
@@ -28,14 +28,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sunnysunny77/slider.git"
+    "url": "git+https://github.com/sunnysunny77/template.git"
   },
   "author": "D.C",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sunnysunny77/slider/issues"
+    "url": "https://github.com/sunnysunny77/template/issues"
   },
-  "homepage": "https://github.com/sunnysunny77/slider#readme",
+  "homepage": "https://github.com/sunnysunny77/template#readme",
   "devDependencies": {
     "@fortawesome/fontawesome-free": "latest",
     "@rollup/plugin-babel": "latest",
@@ -50,6 +50,7 @@
     "express": "latest",
     "fs": "latest",
     "globals": "latest",
+    "http": "latest",
     "http-proxy": "latest",
     "https": "latest",
     "open": "latest",
