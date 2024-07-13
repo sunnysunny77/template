@@ -11,4 +11,4 @@ app.get('/', function(req, res) {
 https.createServer({
     key: fs.readFileSync("./certs/server.key"),
     cert: fs.readFileSync("./certs/server.crt")
-},app).listen(443);
+},app).listen(3000);
