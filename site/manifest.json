@@ -1,7 +1,7 @@
 {
     "name": "Template",
     "short_name": "Template",
-    "start_url": ".",
+    "start_url": "/",
     "background_color": "#FFC0CB",
     "theme_color": "#FFC0CB",
     "display": "standalone",
