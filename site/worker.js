@@ -13,7 +13,6 @@ self.addEventListener("install", (event) => {
       "./index.php",
       "./css/app.min.css",
       "./js/app.min.js",
-      "./font/Poppins-Regular.ttf"
     ])
   );
 });
