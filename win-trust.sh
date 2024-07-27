@@ -1,3 +1,1 @@
-source $INIT_CWD/.env
-
-powershell Import-Certificate -FilePath %INIT_CWD%\\certs\\ca.crt -CertStoreLocation cert:\\CurrentUser\\Root
+powershell Import-Certificate -FilePath certs\\ca.crt -CertStoreLocation cert:\\CurrentUser\\Root
