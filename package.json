@@ -10,7 +10,7 @@
     "install-cert:macos": "cross-env-shell bash mac-trust.sh",
     "install-cert:win32": "cross-env-shell bash win-trust.sh",
     "install-cert:default": "cross-env-shell bash ubuntu-trust.sh",
-    "serve": "node serve.cjs",
+    "serve": "node --env-file=.env serve.cjs",
     "php-server": "node php-server.js",
     "open-server": "node --env-file=.env open.js",
     "watch-css": "sass --embed-sources ./scss/app.scss:./site/css/app.min.css --style compressed -w",

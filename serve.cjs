@@ -1,7 +1,7 @@
 const https = require("https");
 const http = require("http");
 const fs = require("fs");
-
+console.log(process.env.CN)
 https.createServer({
     key: fs.readFileSync("./certs/server.key"),
     cert: fs.readFileSync("./certs/server.crt"),
