@@ -12,7 +12,7 @@
     "install-cert:default": "cross-env-shell bash ubuntu-trust.sh",
     "serve": "node serve.cjs",
     "php-server": "node php-server.js",
-    "open-server": "node --env-file='.env' open.js",
+    "open-server": "node --env-file=.env open.js",
     "watch-css": "sass --embed-sources ./scss/app.scss:./site/css/app.min.css --style compressed -w",
     "build-css": "sass --embed-sources ./scss/app.scss:./site/css/app.min.css --style compressed",
     "production-css": "sass ./scss/app.scss:./site/css/app.min.css --style compressed --no-source-map",
