@@ -10,7 +10,7 @@
     "install-cert:macos": "cross-env-shell bash mac-trust.sh",
     "install-cert:win32": "cross-env-shell bash win-trust.sh",
     "install-cert:default": "cross-env-shell bash ubuntu-trust.sh",
-    "serve": "node --env-file=.env serve.cjs",
+    "https-server": "node --env-file=.env https-server.cjs",
     "php-server": "node php-server.js",
     "open-server": "node --env-file=.env open.js",
     "watch-css": "sass --embed-sources ./scss/app.scss:./site/css/app.min.css --style compressed -w",
@@ -19,7 +19,7 @@
     "watch-js": "rollup -c ./rollup.config-watch.mjs -w --sourcemap",
     "build-js": "rollup -c ./rollup.config.mjs --sourcemap",
     "production-js": "rollup -c ./rollup.config.mjs",
-    "watch": "concurrently -r \"npm:php-server\" \"npm:watch-css\" \"npm:watch-js\" \"npm:serve\" \"npm:open-server\"",
+    "watch": "concurrently  \"npm:php-server\" \"npm:watch-css\" \"npm:watch-js\" \"npm:https-server\" \"npm:open-server\"",
     "build": "concurrently -r \"npm:build-css\" \"npm:build-js\"",
     "production": "concurrently -r \"npm:production-css\" \"npm:production-js\""
   },
@@ -54,6 +54,7 @@
     "rollup-plugin-livereload": "latest",
     "rollup-plugin-sourcemaps": "latest",
     "run-script-os": "latest",
-    "sass": "latest"
+    "sass": "latest",
+    "vhost": "latest"
   }
 }

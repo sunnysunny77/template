@@ -29,7 +29,7 @@
     </h1>
     <br>
     <br>
-    npm run serve "start node server",
+    npm run https-server "start node https server",
     <br>
     npm run php-server "start php server",
     <br>
