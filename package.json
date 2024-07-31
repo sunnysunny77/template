@@ -11,6 +11,7 @@
     "install-cert:win32": "cross-env-shell bash win-trust.sh",
     "install-cert:default": "cross-env-shell bash ubuntu-trust.sh",
     "edit-hosts": "run-script-os",
+    "edit-hosts:win32": "powershell start-process -Verb runas powershell -ArgumentList '–ExecutionPolicy Bypass', '-noexit', 'powershell -File %INIT_CWD%\\win32.ps1'",
     "edit-hosts:default": "sudo node --env-file=.env edit-hosts.cjs",
     "https-server": "node --env-file=.env https-server.cjs",
     "php-server": "node php-server.js",
