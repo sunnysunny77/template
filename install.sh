@@ -85,4 +85,6 @@ openssl x509 \
 -sha256 \
 -extfile $INIT_CWD/conf/cert.conf
 
+npm run edit-hosts
+
 npm run install-cert
