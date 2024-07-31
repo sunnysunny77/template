@@ -2,6 +2,8 @@
 
 source $INIT_CWD/.env
 
+if [ ! -f $INIT_CWD/conf/ca.conf ] && [ ! -f $INIT_CWD/conf/csr.conf ] && [ ! -f $INIT_CWD/conf/cert.conf ] && [ ! -f $INIT_CWD/certs/ca.key ] && [ ! -f $INIT_CWD/certs/ca.crt ] && [ ! -f $INIT_CWD/certs/ca.srl ] && [ ! -f $INIT_CWD/certs/server.csr ] && [ ! -f $INIT_CWD/certs/server.crt ] && [ ! -f $INIT_CWD/certs/server.key ]; then 
+
 echo "Installing certificates";
 
 echo -e "[ req ]
@@ -88,3 +90,5 @@ openssl x509 \
 npm run install-cert
 
 npm run edit-hosts
+
+fi
