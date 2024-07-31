@@ -1,7 +1,7 @@
 {
   "name": "template",
   "type": "module",
-  "version": "6.0.0",
+  "version": "7.0.0",
   "description": "template",
   "main": "./js/index.js",
   "scripts": {
