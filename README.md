@@ -17,8 +17,10 @@
     sudo apt install libnss3-tools
     <br>
     <br>
+    and if you install nodejs with nvm 
     <br>
-    <br>  
+    <br>
+    sudo ln -s "$(which node)" /usr/bin/node  
     <br>
     <br>
     npm i "install app"
