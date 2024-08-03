@@ -1,5 +1,7 @@
 @mixin xs_sm {
-    @media screen and (min-width: 0px) and (max-width: 575px) { @content; }
+    @media screen and (min-width: 0px) and (max-width: 575px) {
+        @content;
+    }
 }
 
 @mixin min_sm {
@@ -31,4 +33,3 @@
         @content;
     }
 }
-
