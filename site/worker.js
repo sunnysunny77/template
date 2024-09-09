@@ -16,6 +16,18 @@ self.addEventListener("install", (event) => {
       "./index.php",
       "./css/app.min.css",
       "./js/app.min.js",
+      "./font/Poppins-Black.ttf",
+      "./font/Poppins-Bold.ttf",
+      "./font/Poppins-ExtraBold.ttf",
+      "./font/Poppins-ExtraLight.ttf",
+      "./font/Poppins-Light.ttf",
+      "./font/Poppins-Medium.ttf",
+      "./font/Poppins-Regular.ttf",
+      "./font/Poppins-SemiBold.ttf",
+      "./font/Poppins-Thin.ttf",
+      "./webfonts/fa-regular-400.woff2",
+      "./webfonts/fa-brands-400.woff2",
+      "./webfonts/fa-solid-900.woff2"
     ])
   );
 });
