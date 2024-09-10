@@ -1,77 +1,42 @@
-const version = "v1";
+const version = 1;
+const cacheName = `template-v${version}`;
 
-const addResourcesToCache = async (resources) => {
-  
-  const cache = await caches.open(version);
-  await cache.addAll(resources);
-};
+const cacheAssets = [
+  "./",
+  "./index.php",
+  "./css/app.min.css",
+  "./js/app.min.js",
+];
 
 self.addEventListener("install", (event) => {
 
-  console.log(`${version} installing...`);
+  console.log("Service worker is installed");
 
-  event.waitUntil(
-    addResourcesToCache([
-      "./",
-      "./index.php",
-      "./css/app.min.css",
-      "./js/app.min.js",
-      "./font/Poppins-Black.ttf",
-      "./font/Poppins-Bold.ttf",
-      "./font/Poppins-ExtraBold.ttf",
-      "./font/Poppins-ExtraLight.ttf",
-      "./font/Poppins-Light.ttf",
-      "./font/Poppins-Medium.ttf",
-      "./font/Poppins-Regular.ttf",
-      "./font/Poppins-SemiBold.ttf",
-      "./font/Poppins-Thin.ttf",
-      "./webfonts/fa-regular-400.woff2",
-      "./webfonts/fa-brands-400.woff2",
-      "./webfonts/fa-solid-900.woff2"
-    ])
-  );
+  event.waitUntil(caches.open(cacheName).then((cache) => {
+
+    console.log("Caching assets");
+    cache.addAll(cacheAssets);
+  }).then(() => {
+
+    self.skipWaiting();
+  }));
 });
 
-async function fetchAndCacheIfOk(event) {
+self.addEventListener("fetch", event => {
 
-  try {
-    const response = await fetch(event.request);
+  console.log("Fetching via Service worker");
+  
+  event.respondWith(caches.match(event.request).then(cachedResponse => {
 
-    if (response.ok) {
+    const networkUpdate = fetch(event.request).then(networkResponse => {
 
-      const responseClone = response.clone();
-      const cache = await caches.open(version);
-      await cache.put(event.request, responseClone);
-    }
+      caches.open(cacheName).then(cache => cache.put(event.request, networkResponse));
+      return networkResponse.clone();
+    }).catch(() => {
 
-    return response;
-  } catch (e) {
+      return false;
+    });
 
-    return e;
-  }
-}
-
-async function fetchWithCache(event) {
-
-  const cache = await caches.open(version);
-  const response = await cache.match(event.request);
-
-  if (response) {
-
-    fetchAndCacheIfOk(event);
-    return response;
-  } else {
-
-    return fetchAndCacheIfOk(event);
-  }
-}
-
-function handleFetch(event) {
-
-  if (event.request.headers.get("cache-control") !== "no-cache") {
-
-    event.respondWith(fetchWithCache(event));
-  }
-}
-
-self.addEventListener("fetch", handleFetch);
+    return cachedResponse || networkUpdate;
+  }));
+});
