@@ -4,8 +4,13 @@ const cacheName = `template-v${version}`;
 const cacheAssets = [
   "./",
   "./index.php",
+  "./favicon.ico",
+  "./manifest.json",
   "./css/app.min.css",
   "./js/app.min.js",
+  "./js/preload.js",
+  "./images/pwa-logo-small.webp",
+  "./images/pwa-logo.webp"
 ];
 
 self.addEventListener("install", (event) => {
