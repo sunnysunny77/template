@@ -7,6 +7,7 @@ const resources = [
   "./favicon.ico",
   "./manifest.json",
   "./css/app.min.css",
+  "./css/fallback.css",
   "./js/app.min.js",
   "./js/preload.js",
   "./font/Poppins-Black.ttf",
