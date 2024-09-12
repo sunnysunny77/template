@@ -22,7 +22,8 @@ const resources = [
   "./webfonts/fa-brands-400.woff2",
   "./webfonts/fa-solid-900.woff2",
   "./images/pwa-logo-small.webp",
-  "./images/pwa-logo.webp"
+  "./images/pwa-logo.webp",
+  "./fallback.php"
 ];
 
 const installResources = async (resources) => {
