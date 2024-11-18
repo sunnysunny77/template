@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source $INIT_CWD/.env
+
 set -e
 
 set -x
@@ -20,6 +22,10 @@ npm run watch-css &
 
 S4=$!
 
+xdg-open "https://$CN:3000" &
+
+S5=$!
+
 wait
  
-kill $S1 $S2 $S3 $S4
+kill $S1 $S2 $S3 $S4 $S5
