@@ -1,10 +1,10 @@
 #!/bin/bash
 
-source $INIT_CWD/.env
-
 set -e
 
 set -x
+
+source $INIT_CWD/.env
 
 npm run watch-js &
 
