@@ -11,7 +11,7 @@
 //import "../node_modules/bootstrap/js/dist/toast";
 //import "../node_modules/bootstrap/js/dist/tooltip";
 
-import  AOS from "aos";
+import AOS from "aos";
 import { service_worker } from "./service_worker.js";
 import { events } from "./utillites.js";
 import { fallback } from "./fallback.js";
