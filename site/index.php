@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-overlayscrollbars-initialize>
 <head>
   <script src="./js/preload.js"></script>
   <meta charset="utf-8" />

@@ -6,3 +6,19 @@ body {
     margin: 0;
     font-family: $font;
 }
+
+// scrollbar
+
+.os-theme-body {
+    --os-size: 7px;
+}
+
+.os-theme-body .os-scrollbar-handle {
+    background: $alpha;
+    border-radius: 0px;
+    height: 85px;
+}
+
+.os-theme-body .os-scrollbar-track {
+    background: transparent;
+}
