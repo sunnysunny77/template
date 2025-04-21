@@ -21,7 +21,7 @@
 
         <div class="row justify-content-center">
 
-          <div data-aos="fade-right" class="col-11 col-sm-24 text-center mt-11">
+          <div class="col-11 col-sm-24 text-center mt-11 scrolled-init right">
 
             HELLO WORLD <i class="fa-regular fa-heart"></i>
             
