@@ -1,15 +1,18 @@
 .scrolled {
     &.right {
-        opacity: 0.67;
-        transform: translateX(-100%);
+        opacity: 0;
+        transform: translateX(-22%);
         animation: scrolled-right 0.67s forwards;
     }
 }
 
 @keyframes scrolled-right {
     0% {
+        opacity: 0;
+        transform: translateX(-22%);
+    }
+    50% {
         opacity: 0.67;
-        transform: translateX(-100%);
     }
     100% {
         opacity: 1;

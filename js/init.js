@@ -13,7 +13,7 @@ const overlay = () => {
   });
 };
 
-const scrolled = () => {
+const scrolled = (obj, options) => {
 
   const observer = new IntersectionObserver((entries, observer)=>{
 
@@ -22,9 +22,9 @@ const scrolled = () => {
       index.target.classList.add("scrolled");
       observer.unobserve(index.target);
     });
-  });
+  },options);
 
-  document.querySelectorAll(".scrolled-init").forEach(index => {
+  obj.forEach(index => {
 
     observer.observe(index);
   });
@@ -32,6 +32,6 @@ const scrolled = () => {
 
 export const init = () => {
 
-  scrolled();
+  scrolled(document.querySelectorAll(".scrolled-init"), {rootMargin: "0px 0px 0px 0px"});
   overlay();
 };
