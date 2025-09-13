@@ -14,9 +14,11 @@ import { init } from "./init.js";
 import { service_worker } from "./service_worker.js";
 import { events } from "./utillites.js";
 import { fallback } from "./fallback.js";
+import { endpoints } from "./endpoints.js";
 
 events(window, "load", () => {
 
+    endpoints();
     init();
     fallback();
     service_worker();
