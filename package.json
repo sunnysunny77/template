@@ -45,7 +45,7 @@
     "@rollup/plugin-commonjs": "latest",
     "@rollup/plugin-node-resolve": "latest",
     "@rollup/plugin-terser": "latest",
-    "bootstrap": "^5.3.3",
+    "bootstrap": "^5.3.8",
     "cors": "latest",
     "cross-env": "latest",
     "dotenv": "latest",
